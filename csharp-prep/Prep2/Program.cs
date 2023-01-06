@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write ("Enter your grade ");
+        Console.Write("Enter your grade ");
         string grade = Console.ReadLine();
         int Grade = int.Parse(grade);
 
@@ -31,8 +31,7 @@ class Program
 
        string passing = Console.ReadLine();
        int Passing = int.Parse(passing);
-       string TextVersion = passing.ToString();
-       if (Passing >= 70)
+        if (Passing >= 70)
        {
         Console.WriteLine("You passed!");
        }
