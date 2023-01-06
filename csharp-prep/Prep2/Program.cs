@@ -29,9 +29,7 @@ class Program
         Console.WriteLine("You got an F.");
        }
 
-       string passing = Console.ReadLine();
-       int Passing = int.Parse(passing);
-        if (Passing >= 70)
+        if (Grade >= 70)
        {
         Console.WriteLine("You passed!");
        }
