@@ -9,11 +9,13 @@ class Program
         
         //Console.WriteLine($"What is the magic number ? {number}");
         int guess = 0;
+        int turns = 0;
 
         while (guess != number)
         {
             Console.Write("What is your guess? ");
             guess = int.Parse(Console.ReadLine());
+            turns += 1;
 
             if (guess < number)
             {
@@ -28,6 +30,7 @@ class Program
                 Console.WriteLine("You guessed the number!");
             }
         }
+        Console.WriteLine($"It took you {turns} turns to guess the number.");
 
     }
 }
