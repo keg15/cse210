@@ -4,6 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep5 World!");
+        Console.Write("Welcome to the program!");
+
+        static void displayName (string name)
+        {
+            Console.WriteLine($"Please enter your name: {name}");
+            return;
+        }
     }
 }
