@@ -6,6 +6,9 @@ class Program
     {
         List<int> numbersList = new List<int>();
         int number = -1;
+        int total = 0;
+        int average;
+        int max;
         Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
         while (number != 0)
@@ -18,12 +21,19 @@ class Program
             {
                 numbersList.Add(number);
             }
-
-            int total = 0;
-            foreach (int numberInput in numbersList)
+            else
             {
-                total = total + numberInput;
-                Console.Write($"The sum is {total}");
+                foreach (int numberInput in numbersList)
+                {
+                    total = total + numberInput;
+                }
+                Console.WriteLine($"The sum is: {total}");
+
+                average = total/numbersList.Count;
+                Console.WriteLine($"The average is: {average}");
+
+                max = numbersList.Max();
+                Console.WriteLine($"The largest number is: {max}");
             }
         }
     }
