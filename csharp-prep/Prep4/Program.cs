@@ -6,7 +6,7 @@ class Program
     {
         List<int> numbersList = new List<int>();
         int number = -1;
-        Console.Write("Enter a list of numbers, type 0 when finished.");
+        Console.WriteLine("Enter a list of numbers, type 0 when finished.");
 
         while (number != 0)
         {
@@ -17,6 +17,13 @@ class Program
             if (number != 0)
             {
                 numbersList.Add(number);
+            }
+
+            int total = 0;
+            foreach (int numberInput in numbersList)
+            {
+                total = total + numberInput;
+                Console.Write($"The sum is {total}");
             }
         }
     }
