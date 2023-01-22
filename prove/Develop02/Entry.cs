@@ -5,9 +5,10 @@ public class Entry
     DateTime theCurrentTime = DateTime.Now;
     string date = DateTime.Now.ToShortDateString();
 
+    //displays the date, prompt, then entry
     public void Display()
     {
-        Console.WriteLine($"{date} {_prompts}");
+        Console.WriteLine($"Date: {date} - Prompt: {_prompts}");
         
         foreach (Entry entry in _prompts)
         {
