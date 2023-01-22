@@ -18,6 +18,6 @@ public class Journal
     }
     public void Display()
     {
-
+        //display prompts based off of what number is
     }
 }
