@@ -1,23 +1,44 @@
 public class Journal
 {
-    
-    public class promptGenerator
+  public Journal()
+  {
+  }
+  public List<Entry> _entry = new List<Entry>();
+
+  public void Display()
+  {
+    foreach(Entry entry in _entry)
     {
-        Random _prompts = new Random();
-        public string Generator()
-        {
-            List<string> prompts = new List<string>();
-            prompts.Add("Who did I serve today?");
-            prompts.Add("What beautiful thing did I see today?");
-            prompts.Add("What was the most fun thing I did today?");
-            prompts.Add("Did I see any animals today?");
-            prompts.Add("Who was the most interesting person I saw today?");
-            int number = _prompts.Next(0, 5);
-            return prompts[number];
-        }
+      entry.Display();
     }
-    public void Display()
+  }
+
+  public void ReadFile() 
+  {
+    string filename = "myJournal.txt";
+    string[] lines = System.IO.File.ReadAllLines(filename);
+    foreach (string line in lines)
     {
-        //display prompts based off of what number is
+      string[] parts = line.Split("|");
+      Entry newEntry = new Entry();
+
+      newEntry.date = parts[0];
+      newEntry._prompts = parts[1];
+      newEntry._entry = parts[2];
+      
+      _entry.Add(newEntry);
     }
+  }
+
+  public void SaveFile()
+  {
+    string fileName = "myJournal.txt";
+    using (StreamWriter outputFile = new StreamWriter(fileName))
+    {
+      foreach(Entry entry in _entry)
+      {
+        outputFile.WriteLine($"{entry.date}|{entry._prompts}|{entry._entry}");
+      }
+    }
+  }
 }
