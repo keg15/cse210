@@ -3,7 +3,7 @@ public class Journal
   public Journal()
   {
   }
-  public List<Entry> _entry = new List<Entry>();
+  public List<Entry> _entry = new List<Entry>();  //keeps track of entries
 
   public void Display()
   {
@@ -42,3 +42,14 @@ public class Journal
     }
   }
 }
+
+
+
+
+
+// filename = filename == string.Empty ? _defaultFile : filename;
+//^^^^ same as:
+//if (filename == string.Empty)
+//{
+//    filename = _defaultFile;
+//}

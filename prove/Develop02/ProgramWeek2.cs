@@ -4,7 +4,7 @@ class ProgramWeek2
 {
     static void Main(string[] args)
     {
-        Journal journal = new Journal();
+        Journal journal = new Journal();    //creates a new instance of Journal (the class)
         string numberChoice = MainMenu();
         while (numberChoice != "5")
         {

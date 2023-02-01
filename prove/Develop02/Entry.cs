@@ -19,6 +19,7 @@ public class Entry
     {
        PromptGenerator prompt = new PromptGenerator();
         _prompts = prompt.Generator();
+        //PromptGenerator prompt = new PromptGenerator().Generator(); ^^^ same thing just shorter
         Console.WriteLine(_prompts);
         _entry = Console.ReadLine();
         DateTime theCurrentTime = DateTime.Now;
