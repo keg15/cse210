@@ -3,7 +3,6 @@ public class FractionLearning3
 {
     private int _top;
     private int _bottom;
-
     public FractionLearning3()
     {
         _top = 1;
