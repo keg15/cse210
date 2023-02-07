@@ -1,0 +1,8 @@
+// Keeps track of the book, chapter, and verse information
+//have attributes for the book, chapter, and verse, as well as a second "end verse" to handle the case of Proverbs 3:5-6.
+//have at least two different constructors to account for cases where there is a single verse or multiple verses
+public class Reference
+{
+    private string _reference;
+    private string _passage;
+}
