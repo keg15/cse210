@@ -1,6 +1,6 @@
-public class Simple : Goal
+public class Eternal : Goal
 {
-    public Simple()
+    public Eternal()
     {
         Console.WriteLine("What is the name of your goal?");
         _name = (Console.ReadLine());
@@ -11,7 +11,7 @@ public class Simple : Goal
     }
     public override void DisplayGoal()
     {
-        Console.WriteLine($"[] {_name}: {_description} {_points} points");
+        Console.WriteLine($"{_name}: {_description} {_points} points");
     }
 
     public override void AddPoints(ref int totalPoints)
